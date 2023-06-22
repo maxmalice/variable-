@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <html lang="fr">
+    <head>
+      <title>Vérification d'année bissextile</title>
+      <style>
+        .bissextile {
+          color: blue;
+        }
+        .non-bissextile {
+          color: green;
+        }
+      </style>
+    </head>
+    <body>
+      <script>
+        var annee = prompt("Veuillez entrer une annee :");
+        if ((annee % 4 == 0 && annee % 100 != 0) || annee % 400 == 0) {
+          document.body.innerHTML = "L'annee est bissextile.";
+          document.body.className = "bissextile";
+        } else {
+          document.body.innerHTML = "L'annee n'est pas bissextile.";
+          document.body.className = "non-bissextile";
+        }
+      </script>
+    </body>
+  </html>
+</html>
